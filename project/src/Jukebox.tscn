@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/Jukebox.gd" type="Script" id=1]
+[ext_resource path="res://assets/music/happy.ogg" type="AudioStream" id=2]
+
+[node name="Jukebox" type="AudioStreamPlayer"]
+script = ExtResource( 1 )
+menu_track = ExtResource( 2 )
+game_track = ExtResource( 2 )

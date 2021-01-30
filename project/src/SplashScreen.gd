@@ -2,6 +2,9 @@ extends Control
 
 onready var Timer = $Timer
 
+func _ready():
+	Jukebox.play_menu_track()
+
 #export var vertical_speed := 50
 
 #onready var _parallax_background := $ParallaxBackground

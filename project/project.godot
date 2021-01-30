@@ -19,6 +19,11 @@ config/name="TheEggHunt"
 run/main_scene="res://src/SplashScreen.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Jukebox="*res://src/Jukebox.tscn"
+Global="*res://src/Global.tscn"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
