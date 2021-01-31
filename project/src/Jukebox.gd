@@ -4,6 +4,11 @@ extends AudioStreamPlayer
 export var menu_track : AudioStream
 export var game_track : AudioStream
 
+var MUTE: bool = false
+
+func _physics_process(delta):
+	if MUTE:
+		playing = false
 
 func play_menu_track():
 	_play_if_different(menu_track)

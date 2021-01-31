@@ -13,6 +13,10 @@ func _on_BackButton_pressed():
 func _on_MusicCheckbox_pressed():
 	Global.play_button_sound()
 	Global.music_volume = not Global.music_volume
+	Jukebox.MUTE = not Global.music_volume
+	if not Jukebox.MUTE:
+		Jukebox.playing = true
+		Jukebox.play_menu_track()
 	
 func _on_SfxCheckbox_pressed():
 	Global.play_button_sound()

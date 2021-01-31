@@ -39,6 +39,7 @@
 [sub_resource type="AnimatedTexture" id=1]
 
 [sub_resource type="DynamicFont" id=2]
+size = 25
 font_data = ExtResource( 35 )
 
 [node name="EggCollectionPage" type="Control"]
@@ -235,10 +236,11 @@ scale = Vector2( 0.204205, 0.191949 )
 texture = ExtResource( 5 )
 
 [node name="EggCountLabel" type="Label" parent="."]
-margin_left = 832.236
+margin_left = 820.3
 margin_top = 51.7246
-margin_right = 872.236
-margin_bottom = 65.7246
+margin_right = 896.3
+margin_bottom = 88.7246
+size_flags_vertical = 0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "10/30"

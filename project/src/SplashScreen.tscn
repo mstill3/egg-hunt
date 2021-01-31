@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/images/title.png" type="Texture" id=1]
 [ext_resource path="res://src/SplashScreen.gd" type="Script" id=2]
 [ext_resource path="res://assets/images/white_tile.png" type="Texture" id=3]
+[ext_resource path="res://src/Egg.tscn" type="PackedScene" id=4]
 
 [node name="SplashScreen" type="Control"]
 script = ExtResource( 2 )
@@ -24,4 +25,14 @@ texture = ExtResource( 1 )
 wait_time = 5.0
 one_shot = true
 autostart = true
+
+[node name="StarEgg" parent="." instance=ExtResource( 4 )]
+position = Vector2( 419.102, 156.5 )
+scale = Vector2( 1.9536, 1.88611 )
+ID = "star"
+
+[node name="YellowBlueFlowerEgg" parent="." instance=ExtResource( 4 )]
+position = Vector2( 500.005, 159.816 )
+scale = Vector2( 1.9536, 1.88611 )
+ID = "yellow_blue_flower"
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

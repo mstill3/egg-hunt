@@ -22,6 +22,7 @@ func _physics_process(delta):
 
 
 func _on_Timer_timeout():
+	Jukebox.play_menu_track()
 	_switch_menu_scene()
 
 

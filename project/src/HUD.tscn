@@ -4,9 +4,11 @@
 [ext_resource path="res://assets/font/HachiMaruPop-Regular.ttf" type="DynamicFontData" id=2]
 
 [sub_resource type="DynamicFont" id=1]
+size = 25
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
+size = 25
 font_data = ExtResource( 2 )
 
 [node name="HUD" type="Control"]

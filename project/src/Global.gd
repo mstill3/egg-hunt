@@ -7,9 +7,9 @@ var difficulty := 1
 var music_volume := true
 var sfx_volume := true
 
-var LEVEL_ONE_TIME = 15
-var LEVEL_TWO_TIME = 15
-var LEVEL_THREE_TIME = 15
+var LEVEL_ONE_TIME = 10
+var LEVEL_TWO_TIME = 8
+var LEVEL_THREE_TIME = 5
 
 var LEVEL_ONE_NUM_EGGS = 3
 var LEVEL_TWO_NUM_EGGS = 3
