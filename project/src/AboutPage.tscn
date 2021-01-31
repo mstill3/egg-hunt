@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/AboutPage.gd" type="Script" id=1]
 [ext_resource path="res://assets/images/title_screen_button.png" type="Texture" id=2]
 [ext_resource path="res://assets/images/white_tile.png" type="Texture" id=3]
 [ext_resource path="res://assets/images/about_title.png" type="Texture" id=4]
 [ext_resource path="res://assets/font/HachiMaruPop-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://src/Egg.tscn" type="PackedScene" id=6]
 
 [sub_resource type="AnimatedTexture" id=1]
 
@@ -69,4 +70,8 @@ enjoy this mini game!
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="RainbowEgg" parent="." instance=ExtResource( 6 )]
+position = Vector2( 467.503, 83.5143 )
+scale = Vector2( 2.17679, 1.4754 )
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
