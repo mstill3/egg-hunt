@@ -8,9 +8,14 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "Egg",
+"language": "GDScript",
+"path": "res://src/Egg.gd"
+} ]
 _global_script_class_icons={
-
+"Egg": ""
 }
 
 [application]
@@ -23,6 +28,7 @@ config/icon="res://icon.png"
 
 Jukebox="*res://src/Jukebox.tscn"
 Global="*res://src/Global.tscn"
+EggHandler="*res://src/EggHandler.gd"
 
 [rendering]
 

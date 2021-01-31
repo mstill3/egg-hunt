@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/LevelThree.gd" type="Script" id=1]
 [ext_resource path="res://assets/images/level_three.png" type="Texture" id=2]
 [ext_resource path="res://assets/images/white_tile.png" type="Texture" id=3]
+[ext_resource path="res://src/Egg.tscn" type="PackedScene" id=4]
 
 [node name="LevelThree" type="Control"]
 script = ExtResource( 1 )
@@ -24,4 +25,33 @@ texture = ExtResource( 2 )
 wait_time = 3.0
 one_shot = true
 autostart = true
+
+[node name="RainbowEgg" parent="." instance=ExtResource( 4 )]
+position = Vector2( 312.57, 236.172 )
+rotation = -1.30423
+scale = Vector2( -2.91032, 3.4781 )
+
+[node name="BrickEgg" parent="." instance=ExtResource( 4 )]
+position = Vector2( 670.248, 476.751 )
+rotation = 0.0975482
+scale = Vector2( -3.88625, 3.95106 )
+ID = "brick"
+
+[node name="WelcomeEgg" parent="." instance=ExtResource( 4 )]
+position = Vector2( 529.505, 545.807 )
+rotation = 0.0975482
+scale = Vector2( 1.21533, 0.980007 )
+ID = "welcome"
+
+[node name="FlowerEgg" parent="." instance=ExtResource( 4 )]
+position = Vector2( 296.527, 547.848 )
+rotation = 0.0975482
+scale = Vector2( 2.46239, 1.71593 )
+ID = "flower"
+
+[node name="SunEgg" parent="." instance=ExtResource( 4 )]
+position = Vector2( 228.711, 67.6736 )
+rotation = 0.0975482
+scale = Vector2( 2.46239, 1.71593 )
+ID = "sun"
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

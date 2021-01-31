@@ -3,6 +3,7 @@ extends Control
 
 func _on_PlayButton_pressed():
 	Global.play_button_sound()
+	Jukebox.play_game_track()
 	var _ignored := get_tree().change_scene("res://src/LevelOneTitleScreen.tscn")
 
 

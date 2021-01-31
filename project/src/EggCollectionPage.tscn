@@ -1,9 +1,39 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://src/EggCollectionPage.gd" type="Script" id=1]
 [ext_resource path="res://assets/images/title_screen_button.png" type="Texture" id=2]
 [ext_resource path="res://assets/images/white_tile.png" type="Texture" id=3]
 [ext_resource path="res://assets/images/egg_collection_title.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/eggs/youtube_egg.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/eggs/yellow_blue_flower_egg.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/eggs/nike_egg.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/eggs/sea_swirl_egg.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/eggs/godot_egg.png" type="Texture" id=9]
+[ext_resource path="res://assets/images/eggs/colored_egg.png" type="Texture" id=10]
+[ext_resource path="res://assets/images/eggs/smile_egg.png" type="Texture" id=11]
+[ext_resource path="res://assets/images/eggs/facebook_egg.png" type="Texture" id=12]
+[ext_resource path="res://assets/images/eggs/frown_egg.png" type="Texture" id=13]
+[ext_resource path="res://assets/images/eggs/snap_egg.png" type="Texture" id=14]
+[ext_resource path="res://assets/images/eggs/towson_egg.png" type="Texture" id=15]
+[ext_resource path="res://assets/images/eggs/rainbow_egg.png" type="Texture" id=16]
+[ext_resource path="res://assets/images/eggs/blue_egg.png" type="Texture" id=17]
+[ext_resource path="res://assets/images/eggs/bumble_egg.png" type="Texture" id=18]
+[ext_resource path="res://assets/images/eggs/star_egg.png" type="Texture" id=19]
+[ext_resource path="res://assets/images/eggs/welcome_egg.png" type="Texture" id=20]
+[ext_resource path="res://assets/images/eggs/red_yellow_egg.png" type="Texture" id=21]
+[ext_resource path="res://assets/images/eggs/spotify_egg.png" type="Texture" id=22]
+[ext_resource path="res://assets/images/eggs/sunset_egg.png" type="Texture" id=23]
+[ext_resource path="res://assets/images/eggs/heart_egg.png" type="Texture" id=24]
+[ext_resource path="res://assets/images/eggs/piggy_egg.png" type="Texture" id=25]
+[ext_resource path="res://assets/images/eggs/apple_egg.png" type="Texture" id=26]
+[ext_resource path="res://assets/images/eggs/sun_egg.png" type="Texture" id=27]
+[ext_resource path="res://assets/images/eggs/brick_egg.png" type="Texture" id=28]
+[ext_resource path="res://assets/images/eggs/dino_egg.png" type="Texture" id=29]
+[ext_resource path="res://assets/images/eggs/flower_egg.png" type="Texture" id=30]
+[ext_resource path="res://assets/images/eggs/ggj_egg.png" type="Texture" id=31]
+[ext_resource path="res://assets/images/eggs/blank_egg.png" type="Texture" id=32]
+[ext_resource path="res://assets/images/eggs/circles_egg.png" type="Texture" id=33]
+[ext_resource path="res://assets/images/eggs/flave_egg.png" type="Texture" id=34]
 
 [sub_resource type="AnimatedTexture" id=1]
 
@@ -24,20 +54,179 @@ scale = Vector2( 0.438908, 0.382217 )
 texture = ExtResource( 4 )
 
 [node name="TitleScreenButtonImage" type="Sprite" parent="."]
-position = Vector2( 197.372, 470.814 )
+position = Vector2( 83.3126, 425.721 )
 scale = Vector2( 0.309323, 0.323296 )
 texture = ExtResource( 2 )
 
 [node name="BackButton" type="Button" parent="."]
 show_behind_parent = true
-margin_left = 166.978
-margin_top = 405.057
-margin_right = 179.978
-margin_bottom = 425.057
+margin_left = 55.5711
+margin_top = 364.606
+margin_right = 68.5711
+margin_bottom = 384.606
 rect_scale = Vector2( 4.7808, 6.47399 )
 mouse_default_cursor_shape = 2
 icon = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Eggs" type="Control" parent="."]
+margin_left = 84.2183
+margin_top = -5.30509
+margin_right = 124.218
+margin_bottom = 34.6949
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AppleEgg" type="Sprite" parent="Eggs"]
+position = Vector2( 194.299, 220.824 )
+scale = Vector2( 0.204205, 0.191949 )
+texture = ExtResource( 26 )
+
+[node name="BlankEgg" type="Sprite" parent="Eggs"]
+position = Vector2( 273.212, 222.151 )
+scale = Vector2( 0.204205, 0.191949 )
+texture = ExtResource( 32 )
+
+[node name="BlueEgg" type="Sprite" parent="Eggs"]
+position = Vector2( 359.42, 219.498 )
+scale = Vector2( 0.204205, 0.191949 )
+texture = ExtResource( 17 )
+
+[node name="BrickEgg" type="Sprite" parent="Eggs"]
+position = Vector2( 433.028, 221.487 )
+scale = Vector2( 0.204205, 0.191949 )
+texture = ExtResource( 28 )
+
+[node name="BumbleEgg" type="Sprite" parent="Eggs"]
+position = Vector2( 516.583, 222.814 )
+scale = Vector2( 0.204205, 0.191949 )
+texture = ExtResource( 18 )
+
+[node name="CirclesEgg" type="Sprite" parent="Eggs"]
+position = Vector2( 586.212, 225.466 )
+scale = Vector2( 0.204205, 0.191949 )
+texture = ExtResource( 33 )
+
+[node name="ColoredEgg" type="Sprite" parent="Eggs"]
+position = Vector2( 190.983, 305.043 )
+scale = Vector2( 0.204205, 0.191949 )
+texture = ExtResource( 10 )
+
+[node name="DinoEgg" type="Sprite" parent="Eggs"]
+position = Vector2( 274.538, 303.716 )
+scale = Vector2( 0.204205, 0.191949 )
+texture = ExtResource( 29 )
+
+[node name="FacebookEgg" type="Sprite" parent="Eggs"]
+position = Vector2( 362.073, 303.053 )
+scale = Vector2( 0.204205, 0.191949 )
+texture = ExtResource( 12 )
+
+[node name="FlaveEgg" type="Sprite" parent="Eggs"]
+position = Vector2( 435.681, 303.053 )
+scale = Vector2( 0.204205, 0.191949 )
+texture = ExtResource( 34 )
+
+[node name="FlowerEgg" type="Sprite" parent="Eggs"]
+position = Vector2( 515.92, 303.716 )
+scale = Vector2( 0.204205, 0.191949 )
+texture = ExtResource( 30 )
+
+[node name="FrownEgg" type="Sprite" parent="Eggs"]
+position = Vector2( 583.56, 297.748 )
+scale = Vector2( 0.204205, 0.191949 )
+texture = ExtResource( 13 )
+
+[node name="GGJEgg" type="Sprite" parent="Eggs"]
+position = Vector2( 190.983, 385.945 )
+scale = Vector2( 0.204205, 0.191949 )
+texture = ExtResource( 31 )
+
+[node name="GodotEgg" type="Sprite" parent="Eggs"]
+position = Vector2( 274.539, 387.271 )
+scale = Vector2( 0.204205, 0.191949 )
+texture = ExtResource( 9 )
+
+[node name="HeartEgg" type="Sprite" parent="Eggs"]
+position = Vector2( 357.43, 387.272 )
+scale = Vector2( 0.204205, 0.191949 )
+texture = ExtResource( 24 )
+
+[node name="NikeEgg" type="Sprite" parent="Eggs"]
+position = Vector2( 431.039, 383.956 )
+scale = Vector2( 0.204205, 0.191949 )
+texture = ExtResource( 7 )
+
+[node name="PiggyEgg" type="Sprite" parent="Eggs"]
+position = Vector2( 513.931, 386.608 )
+scale = Vector2( 0.204205, 0.191949 )
+texture = ExtResource( 25 )
+
+[node name="RainbowEgg" type="Sprite" parent="Eggs"]
+position = Vector2( 584.223, 383.293 )
+scale = Vector2( 0.204205, 0.191949 )
+texture = ExtResource( 16 )
+
+[node name="RedYellowEgg" type="Sprite" parent="Eggs"]
+position = Vector2( 190.983, 470.827 )
+scale = Vector2( 0.204205, 0.191949 )
+texture = ExtResource( 21 )
+
+[node name="SeaSwirlEgg" type="Sprite" parent="Eggs"]
+position = Vector2( 271.886, 470.827 )
+scale = Vector2( 0.204205, 0.191949 )
+texture = ExtResource( 8 )
+
+[node name="SmileEgg" type="Sprite" parent="Eggs"]
+position = Vector2( 351.462, 466.185 )
+scale = Vector2( 0.204205, 0.191949 )
+texture = ExtResource( 11 )
+
+[node name="SnapEgg" type="Sprite" parent="Eggs"]
+position = Vector2( 430.375, 465.522 )
+scale = Vector2( 0.204205, 0.191949 )
+texture = ExtResource( 14 )
+
+[node name="SpotifyEgg" type="Sprite" parent="Eggs"]
+position = Vector2( 509.288, 465.522 )
+scale = Vector2( 0.204205, 0.191949 )
+texture = ExtResource( 22 )
+
+[node name="StarEgg" type="Sprite" parent="Eggs"]
+position = Vector2( 574.276, 464.195 )
+scale = Vector2( 0.204205, 0.191949 )
+texture = ExtResource( 19 )
+
+[node name="SunsetEgg" type="Sprite" parent="Eggs"]
+position = Vector2( 181.699, 549.077 )
+scale = Vector2( 0.204205, 0.191949 )
+texture = ExtResource( 23 )
+
+[node name="SunEgg" type="Sprite" parent="Eggs"]
+position = Vector2( 263.265, 548.414 )
+scale = Vector2( 0.204205, 0.191949 )
+texture = ExtResource( 27 )
+
+[node name="TowsonEgg" type="Sprite" parent="Eggs"]
+position = Vector2( 344.168, 543.109 )
+scale = Vector2( 0.204205, 0.191949 )
+texture = ExtResource( 15 )
+
+[node name="WelcomeEgg" type="Sprite" parent="Eggs"]
+position = Vector2( 429.712, 546.424 )
+scale = Vector2( 0.204205, 0.191949 )
+texture = ExtResource( 20 )
+
+[node name="YellowBlueFlowerEgg" type="Sprite" parent="Eggs"]
+position = Vector2( 501.994, 551.729 )
+scale = Vector2( 0.204205, 0.191949 )
+texture = ExtResource( 6 )
+
+[node name="YoutubeEgg" type="Sprite" parent="Eggs"]
+position = Vector2( 574.939, 548.414 )
+scale = Vector2( 0.204205, 0.191949 )
+texture = ExtResource( 5 )
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]

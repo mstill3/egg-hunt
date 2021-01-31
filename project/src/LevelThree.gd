@@ -17,4 +17,5 @@ func _ready():
 
 
 func _on_Timer_timeout():
+	Jukebox.play_menu_track()
 	var _ignored := get_tree().change_scene("res://src/MainMenu.tscn")
