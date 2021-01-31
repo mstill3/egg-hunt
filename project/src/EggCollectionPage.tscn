@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://src/EggCollectionPage.gd" type="Script" id=1]
 [ext_resource path="res://assets/images/title_screen_button.png" type="Texture" id=2]
@@ -34,8 +34,12 @@
 [ext_resource path="res://assets/images/eggs/blank_egg.png" type="Texture" id=32]
 [ext_resource path="res://assets/images/eggs/circles_egg.png" type="Texture" id=33]
 [ext_resource path="res://assets/images/eggs/flave_egg.png" type="Texture" id=34]
+[ext_resource path="res://assets/font/HachiMaruPop-Regular.ttf" type="DynamicFontData" id=35]
 
 [sub_resource type="AnimatedTexture" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 35 )
 
 [node name="EggCollectionPage" type="Control"]
 script = ExtResource( 1 )
@@ -229,4 +233,13 @@ texture = ExtResource( 6 )
 position = Vector2( 574.939, 548.414 )
 scale = Vector2( 0.204205, 0.191949 )
 texture = ExtResource( 5 )
+
+[node name="EggCountLabel" type="Label" parent="."]
+margin_left = 832.236
+margin_top = 51.7246
+margin_right = 872.236
+margin_bottom = 65.7246
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "10/30"
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]

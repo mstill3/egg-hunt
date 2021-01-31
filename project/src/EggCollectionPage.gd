@@ -11,6 +11,7 @@ func _on_BackButton_pressed():
 var outlined_egg_image = load("res://assets/images/eggs/outline_egg.png")
 
 func _ready():
+	set_egg_count_label(Global.get_num_eggs_collected(), Global.NUM_EGGS)
 	if not Global.eggs_collected.has('apple'):
 		$Eggs/AppleEgg.texture = outlined_egg_image
 	if not Global.eggs_collected.has('blank'):
@@ -71,3 +72,7 @@ func _ready():
 		$Eggs/YellowBlueFlowerEgg.texture = outlined_egg_image
 	if not Global.eggs_collected.has('youtube'):
 		$Eggs/YoutubeEgg.texture = outlined_egg_image
+
+
+func set_egg_count_label(current: int, total: int) -> void:
+	$EggCountLabel.text = str(current) + "/" + str(total)

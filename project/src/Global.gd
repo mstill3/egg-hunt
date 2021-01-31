@@ -15,6 +15,7 @@ var LEVEL_ONE_NUM_EGGS = 3
 var LEVEL_TWO_NUM_EGGS = 3
 var LEVEL_THREE_NUM_EGGS = 5
 
+var NUM_EGGS = 30
 
 onready var _button_sound := $ButtonSound
 
@@ -23,7 +24,9 @@ func play_button_sound():
 	
 	
 func collect(egg_id: String) -> void:
-#	 TODO set check
-	eggs_collected.append(egg_id)
+	if not eggs_collected.has(egg_id):
+		eggs_collected.append(egg_id)
 	EGGS_FOUND_IN_LEVEL += 1
 	
+func get_num_eggs_collected() -> int:
+	return eggs_collected.size()

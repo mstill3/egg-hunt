@@ -1,10 +1,5 @@
 extends Control
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
 		
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -24,10 +19,6 @@ func _physics_process(delta):
 		
 	$HUD.set_egg_count_label(Global.EGGS_FOUND_IN_LEVEL, Global.LEVEL_ONE_NUM_EGGS)
 	$HUD.set_time_label($Timer.get_time_left())
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
 
 func _on_Timer_timeout():
