@@ -3,6 +3,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$PauseScreen.visible = false
 	Global.EGGS_FOUND_IN_LEVEL = 0
 	$Timer.wait_time = Global.LEVEL_TWO_TIME
 	$Timer.start()
@@ -11,7 +12,7 @@ func _ready():
 		NewEgg.ID = EggHandler.get_random_id()
 		NewEgg.position.x = randi() % 1024
 		NewEgg.position.y = randi() % 600
-		add_child(NewEgg)
+		$Eggs.add_child(NewEgg)
 
 func _physics_process(delta):
 	if Global.EGGS_FOUND_IN_LEVEL >= Global.LEVEL_TWO_NUM_EGGS:
@@ -31,3 +32,13 @@ func _switch_next_scene():
 	
 func _switch_menu_scene():
 	var _ignored := get_tree().change_scene("res://src/MainMenu.tscn")
+
+
+func _on_PauseButton_pressed():
+	$PauseScreen.visible = true
+	$Timer.paused = true
+
+
+func _on_PauseScreen_on_PlayButton_pressed():
+	$PauseScreen.visible = false
+	$Timer.paused = false

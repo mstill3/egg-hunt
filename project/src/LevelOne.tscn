@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/LevelOne.gd" type="Script" id=1]
 [ext_resource path="res://assets/images/level_one.png" type="Texture" id=2]
 [ext_resource path="res://assets/images/white_tile.png" type="Texture" id=3]
 [ext_resource path="res://src/HUD.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/PauseButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/PauseScreen.tscn" type="PackedScene" id=6]
 
 [node name="LevelOne" type="Control"]
 script = ExtResource( 1 )
@@ -25,5 +27,18 @@ texture = ExtResource( 2 )
 wait_time = 3.0
 one_shot = true
 
+[node name="Eggs" type="YSort" parent="."]
+
 [node name="HUD" parent="." instance=ExtResource( 4 )]
+
+[node name="PauseButton" parent="." instance=ExtResource( 5 )]
+margin_left = 25.9409
+margin_top = 498.98
+margin_right = 376.941
+margin_bottom = 802.98
+
+[node name="PauseScreen" parent="." instance=ExtResource( 6 )]
+visible = false
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="PauseButton" to="." method="_on_PauseButton_pressed"]
+[connection signal="on_PlayButton_pressed" from="PauseScreen" to="." method="_on_PauseScreen_on_PlayButton_pressed"]
