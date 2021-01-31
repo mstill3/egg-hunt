@@ -4,8 +4,8 @@ var EGGS_FOUND_IN_LEVEL := 0
 
 var eggs_collected := []
 var difficulty := 1
-var music_volume := 1
-var sfx_volume := 1
+var music_volume := true
+var sfx_volume := true
 
 var LEVEL_ONE_TIME = 15
 var LEVEL_TWO_TIME = 15
@@ -20,7 +20,8 @@ var NUM_EGGS = 30
 onready var _button_sound := $ButtonSound
 
 func play_button_sound():
-	_button_sound.play()
+	if sfx_volume:
+		_button_sound.play()
 	
 	
 func collect(egg_id: String) -> void:
