@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/HUD.gd" type="Script" id=1]
+[ext_resource path="res://assets/font/HachiMaruPop-Regular.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[node name="HUD" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EggCountLabel" type="Label" parent="."]
+margin_left = 27.8517
+margin_top = 26.5254
+margin_right = 67.8517
+margin_bottom = 40.5254
+size_flags_vertical = 5
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0/3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimeLabel" type="Label" parent="."]
+margin_left = 957.569
+margin_top = 21.2204
+margin_right = 997.569
+margin_bottom = 35.2204
+size_flags_vertical = 5
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "10"

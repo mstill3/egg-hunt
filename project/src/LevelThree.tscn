@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/LevelThree.gd" type="Script" id=1]
 [ext_resource path="res://assets/images/level_three.png" type="Texture" id=2]
 [ext_resource path="res://assets/images/white_tile.png" type="Texture" id=3]
 [ext_resource path="res://src/Egg.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/HUD.tscn" type="PackedScene" id=5]
 
 [node name="LevelThree" type="Control"]
 script = ExtResource( 1 )
@@ -24,7 +25,6 @@ texture = ExtResource( 2 )
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
-autostart = true
 
 [node name="RainbowEgg" parent="." instance=ExtResource( 4 )]
 position = Vector2( 312.57, 236.172 )
@@ -54,4 +54,6 @@ position = Vector2( 228.711, 67.6736 )
 rotation = 0.0975482
 scale = Vector2( 2.46239, 1.71593 )
 ID = "sun"
+
+[node name="HUD" parent="." instance=ExtResource( 5 )]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

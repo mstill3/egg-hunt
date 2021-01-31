@@ -22,7 +22,7 @@ _global_script_class_icons={
 
 config/name="TheEggHunt"
 run/main_scene="res://src/SplashScreen.tscn"
-config/icon="res://icon.png"
+config/icon="res://assets/images/eggs/rainbow_egg.png"
 
 [autoload]
 

@@ -18,7 +18,7 @@ func hasBeenFound(event) -> bool:
 		
 func _input(event):
 	if hasBeenFound(event):
-		Global.eggs_collected.append(ID)
+		Global.collect(ID)
 		queue_free()
 
 

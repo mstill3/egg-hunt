@@ -1,14 +1,18 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/LevelOne.gd" type="Script" id=1]
 [ext_resource path="res://assets/images/level_one.png" type="Texture" id=2]
 [ext_resource path="res://assets/images/white_tile.png" type="Texture" id=3]
+[ext_resource path="res://src/HUD.tscn" type="PackedScene" id=4]
 
-[node name="LevelOne" type="Node2D"]
+[node name="LevelOne" type="Control"]
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="WhiteBackground" type="Sprite" parent="."]
-position = Vector2( 487.474, 295.672 )
+position = Vector2( 486.811, 295.672 )
 scale = Vector2( 20.35, 10.5931 )
 texture = ExtResource( 3 )
 
@@ -20,5 +24,6 @@ texture = ExtResource( 2 )
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
-autostart = true
+
+[node name="HUD" parent="." instance=ExtResource( 4 )]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
