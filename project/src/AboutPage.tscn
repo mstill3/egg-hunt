@@ -56,7 +56,7 @@ rect_scale = Vector2( 0.871288, 0.832223 )
 size_flags_vertical = 1
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Hello! This game was created by Matthew Stillwell and Kayla Duda 
+text = "Hello! This game was created by Matt Stillwell and Kayla Duda 
 in one day. We are both undergraduates from Towson University, 
 located in Towson, Maryland. This game was created using Godot 
 and is our first published game! 
@@ -74,4 +74,4 @@ __meta__ = {
 [node name="RainbowEgg" parent="." instance=ExtResource( 6 )]
 position = Vector2( 467.503, 83.5143 )
 scale = Vector2( 2.17679, 1.4754 )
-[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_MenuButton_pressed"]

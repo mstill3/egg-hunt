@@ -35,6 +35,7 @@ func _switch_menu_scene():
 
 
 func _on_PauseButton_pressed():
+	Global.play_button_sound()
 	$PauseScreen.visible = true
 	$Timer.paused = true
 

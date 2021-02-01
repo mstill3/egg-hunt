@@ -1,0 +1,94 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://src/TryAgainPage.gd" type="Script" id=1]
+[ext_resource path="res://assets/images/title_screen_button.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/white_tile.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/egg_button.png" type="Texture" id=4]
+[ext_resource path="res://assets/font/HachiMaruPop-Regular.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 35
+outline_size = 1
+outline_color = Color( 0.270588, 0.243137, 0.243137, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="AnimatedTexture" id=2]
+
+[node name="TryAgainPage" type="Control"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WhiteBackground" type="Sprite" parent="."]
+position = Vector2( 487.474, 295.672 )
+scale = Vector2( 20.35, 10.5931 )
+texture = ExtResource( 3 )
+
+[node name="Title" type="Label" parent="."]
+margin_left = 28.0829
+margin_top = 53.1017
+margin_right = 1147.08
+margin_bottom = 490.102
+rect_scale = Vector2( 0.871288, 0.832223 )
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Try Again"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RetryButtonImage" type="Sprite" parent="."]
+position = Vector2( 340.44, 305.517 )
+scale = Vector2( 0.309323, 0.323296 )
+texture = ExtResource( 4 )
+
+[node name="RetryButton" type="Button" parent="."]
+show_behind_parent = true
+margin_left = 308.043
+margin_top = 246.013
+margin_right = 321.043
+margin_bottom = 266.013
+rect_scale = Vector2( 4.7808, 6.47399 )
+mouse_default_cursor_shape = 2
+icon = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RetryLabel" type="Label" parent="."]
+margin_left = 83.7919
+margin_top = 268.607
+margin_right = 1202.79
+margin_bottom = 705.607
+rect_scale = Vector2( 0.465132, 0.646683 )
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Retry"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TitleScreenButtonImage" type="Sprite" parent="."]
+position = Vector2( 667.092, 309.935 )
+scale = Vector2( 0.309323, 0.323296 )
+texture = ExtResource( 2 )
+
+[node name="MenuButton" type="Button" parent="."]
+show_behind_parent = true
+margin_left = 640.853
+margin_top = 246.013
+margin_right = 653.853
+margin_bottom = 266.013
+rect_scale = Vector2( 4.7808, 6.47399 )
+mouse_default_cursor_shape = 2
+icon = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="RetryButton" to="." method="_on_MenuButton_pressed"]
+[connection signal="pressed" from="MenuButton" to="." method="_on_MenuButton_pressed"]
